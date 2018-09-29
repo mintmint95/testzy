@@ -27,4 +27,9 @@ sequelize.authenticate()
   .then(() => console.log('connected'))
   .catch((err) => console.log)
 ```
+### How to Run migration via cli
+
+```bash
+$ npm run migration:create -- --name=migrationName
+```
 
