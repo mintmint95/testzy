@@ -4,7 +4,10 @@
   "description": "My first project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migration:create": "sequelize migration:create",
+    "migration:migrate": "sequelize db:migrate --config config/config.json",
+    "dev": "docker-compose up -d &&  npm run migration:migrate && nodemon index.js"
   },
   "repository": {
     "type": "git",
